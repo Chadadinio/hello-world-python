@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file docker/Dockerfile --tag ${{secrets.DOCKER_USER}}/assaf_lessons:$(date +%s)
       
     - name: Docker Push
-      run: docker push $(date +%s)
+      run: docker push ${{secrets.DOCKER_USER}}/assaf_lessons:python
